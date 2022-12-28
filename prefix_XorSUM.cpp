@@ -21,44 +21,6 @@ ll lcm(ll a, ll b)
 void solve()
 {
 
-    ll n; // No of subarrays with xor_sum k;
-    cin >> n;
-    ll k = 6; // let k = 6
-
-    vector<ll> hash1((2 * n) + 5, 0);
-    vector<ll> elm(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> elm[i];
-    }
-
-    // Find Prefix_Xor
-
-    vector<ll> prefix_xor(n);
-    prefix_xor[0] = elm[0];
-
-    for (int i = 1; i < n; i++)
-    {
-        prefix_xor[i] = elm[i] ^ prefix_xor[i - 1];
-    }
-
-    ll cnt = 0;
-    for (int i = 0; i < n; i++)
-    {
-
-        if (prefix_xor[i] == k)
-        {
-            cnt++; // if you find prefix_xor = k, increment the counter
-        }
-        else
-        {
-            hash1[prefix_xor[i]]++;
-            ll check = (prefix_xor[i]) ^ (k); // if check is in our hash then it is sure that there is k on xor_sum. (no of that hash is the number of sub-array with xor_sum k ending at 'i').
-            cnt += hash1[check];              // Will this way get's all the subarray??
-        }
-    }
-
-    cout << cnt << endl;
 }
 int main()
 {
