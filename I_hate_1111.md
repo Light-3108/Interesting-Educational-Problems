@@ -10,8 +10,8 @@
 2. Better Approach
    
    x = 11*a + 111*b if this is true we print YES.
-   x = 11*a + (10*11 + 1)*b
-   x = 11(a + 10*b) + b
+   x = 11*a + (10.11 + 1)*b.
+   x = 11(a + 10*b) + b.
    
    we can say: a + 10*b = (int) x/11
                hence if (a = (int) x/11 - 10*b ) is positive we can make x so YES else NO
