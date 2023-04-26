@@ -1,0 +1,9 @@
+CSES problem: chessboard and queen
+
+Approach
+
+1. simple recursive and backtracking approach
+2. 3 1D arrays are used col, diag1, diag2.
+    col -> Find if any col is attacked by queen or not
+    diag1 -> Find if diagonal with negative slope is attacked by queen or not \
+    diag2 -> Find if diagonal with positive slope is attacked by queen or not \
